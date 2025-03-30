@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Waste Segregation</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">AI-Driven Smart Waste Segregation System Using Image Classification</h1>
+        
+        <div class="main-content">
+            <!-- Left Section - Camera Feed -->
+            <div class="left-section">
+                <div class="camera-section">
+                    <video id="camera" autoplay></video>
+                    <div class="camera-controls">
+                        <button id="captureBtn" class="btn">Capture Image</button>
+                        <button id="startCameraBtn" class="btn">Start Camera</button>
+                        <button id="stopCameraBtn" class="btn">Stop Camera</button>
+                    </div>
+                    <canvas id="canvas"></canvas>
+                </div>
+                <div class="faculty-info" style="font-weight: 1000; font-size: x-large;">
+                    Faculty: Dr. Abhishek Tripathi
+                </div>
+            </div>
+
+            <!-- Right Section - File Upload -->
+            <div class="right-section">
+                <div class="upload-section">
+                    <div class="upload-area" id="dropZone">
+                        <p>Drag & Drop your image here</p>
+                        <p>or</p>
+                        <input type="file" id="imageUpload" accept="image/*">
+                        <button id="uploadBtn" class="btn">Browse Files</button>
+                    </div>
+                </div>
+                <div class="team-info">
+                    <h3>Team Details</h3>
+                    <p>NC Anirudh(99230040379)/CSE</p>
+                    <p>K Bhavya Sree(99230040028)/CSE</p>
+                    <p>S Lakshmi Prasanna(9923005168)/ECE</p>
+                    <p>A Siva Krishna(99230040258)/CSE</p>
+                    <p>K Srikanth(99230040341)/CSE</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Classification Output -->
+        <div class="output-section">
+            <h2>Classification Result:</h2>
+            <div id="result" class="result-box">Waiting for input...</div>
+            <div id="confidence" class="confidence-meter"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
